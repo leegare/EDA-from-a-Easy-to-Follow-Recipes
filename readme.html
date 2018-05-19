@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<title>K2DS EDA Project - Readme.html</title>
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+
+body{background-color: #c5ab07;
+}
+</style>
+
+
+</head>
+
+<body>
+
+  <style type="text/css">
+  .main-container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  code {
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  img {
+    max-width:100%;
+    height: auto;
+  }
+  .tabbed-pane {
+    padding-top: 12px;
+  }
+  button.code-folding-btn:focus {
+    outline: none;
+  }
+  </style>
+
+
+
+<div class="container-fluid main-container">
+  <div class="section level1">
+    <h1>What are the top ingredients to prepare a MAX of quick and easy meals?
+    </h1>
+    <div class="section level2">
+      <h2>Exploring the homechef.com dataset of recipes</h2>
+      <div class="section level4">
+        <h4>Ricardo Aguilar, K2 Exploratory Data Analysis</h4>
+        <p>Introduction</p>
+        <h4>This repository contains the following folders and files:</h4>
+        <ul>
+          <li>
+            <h4>Datasets: where a sqlite file contains the database with 3 tables explained further
+          </li>
+          <li>
+            <h4>Img: Graphs and charts used to illustrate the project.
+          </li>
+          <li>
+            <h4>The notebooks, described below:</li></br>
+          <ul>
+              <li>1. P2 DB Creation and tables - This notebook creates 3 tables in the project's database:
+                  <ul>
+                  <li>meal_info table: it's the main table consisting of :
+                      <ul><li>meal_id, meal_title, cook-time , expertise level, spicyness level, days til expiration, category and personal rating.</li></ul>
+                  </li>
+                  <li>meal_ingredients: it links the meal_id to the list of ingredients.
+                  </li>
+                  <li>meal_bow: It's a table containing the Bag of Words used to segment the ingredients list.
+                  </li>
+                </ul>
+              </li>
+              </br>
+              <li>2. P2 Web Scraping - The scripts in this notebook will scrape the recipes out of the website's dataset and fill the meal_info and
+                  meal_ingredients table.
+                  There is also another script that inserts the same amount of information but instead of getting the url of homechef's recipe index, it receives the url of a single meal.
+              </li></br>
+              <li>3. P2 CSV scraping - Reads the data located in the csv file I've created since I started cooking with Homechef and logging the meal's id, meal's title, category, rating.
+              Then defines the url of the recipe and scrapes the ingredients out of the web page and saves it on the meal_ingredients table.
+              </li></br>
+              <li>4. P2 Merge csv with web info - Script that just merges the meal_info tables and the meal_ingredients tables from both sources (web and csv)
+              </li></br>
+              <li>5. P2 Preprocess Data - contains the scripts to polish the data prior to interpretation and saves it in a sqlite file.
+              </li></br>
+              <li>6. P2 Visualization - Script that has the code to create all files in the img folder.
+              </li></br>
+              <li>7. P2 Project2 - Markdown content summarizing the project.
+              </li></br>
+              <li>8. MVP - Markdown content of the MVP. 
+              </li></br>
+
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
