@@ -3,23 +3,23 @@
 *Ricardo Aguilar, K2 Data Science bootcamp: Exploratory Data Analysis project*
 
 ## Goals
----
+
 Save time planning for dinner, reduce food waste, minimize your grocery shopping trips and  enjoy the experience of cooking whatever your apetite dictates you. 
 This project intends to find out what grocery products to opt for with longer shelf-life & multiple uses. 
 
 ## Background
----
+
 I used to eat out or prepare microwaveable meals, but now I've developed a hobbie: cooking real food. There are a bunch of Easy-To-Follow meal-kit-delivering companies like Blue Apron, GreenChef, HelloFresh but it was Homechef that caught my eye for its versatility, quality of ingredients and delicious recipes. For almost 2 years, I've been rating them from 1 to 5 stars; 5 being: "*a meal to die for*".
 This analysis done in Homechef's dataset aims to identify patterns between the ingredients and its meals.  
 
 ## Questions for Exploration
----
+
 - How many ingredients are necessary to make up an average meal?
 - What are the essential ingredients for most quick and easy meals? 
 - Is there a relation between the ingredients of fast and easy meals with those slow and difficult ones?
 
 ## The Dataset
----
+
 HomeChef's website displays 168 meals using around 188 unique ingredients (aside from the staple products such as salt and pepper). 
 These recipes can be characterized by the following variables: 
 
@@ -36,11 +36,11 @@ These recipes can be characterized by the following variables:
 I've organized them in 2 dataframes: meal_info and meal_ing. Meal_info contains the principal information about the meal such as Duration, Number of days left for the ingredients to perish, Difficulty level, Spicy level and Rating, the latter is a value assigned by me so the meals that remain unrated have a rating of 0. Meal_ing has the meal_id and all of its ingredients descriptors such as quantity, main ingredient as well as its type and shape. A third dataframe was added listing all the unique ingredients refered by all of the meals along with a primary unique key. This dataframe doesn't have a use yet but it could hold information about the main ingredient such as domain, supercategory, calorie intake, nutrition facts, etc. 
 
 ## Pre-processing
----
+
 Aside from the typical pre-processing functions (minimize outliers, converting variables to their adequate data type), I've added a **category** column to the meal_info table pretty much copying the main ingredient from the meal's title (i.e. *Patio BBQ Steak Sandwich with grilled corn* extracts the category: *steak*) in order to add a new and broader point of view. I've also spent a lot of time cleaning the meal_ing table fusioning and re-classifying the different variables there are. 
 
 ## Exploratory Analysis
----
+
 #### Categorical Bias: 
 Meals based with pork are the most common meals in the Homechef database, probably due to its price. Secondly the vegetarian meals fall behind 20%. Meals based with lamb and sausage have only one count in the database. In conclusion there are not enough meals from the minor categories to make the Homechef's dataset more uniform. The outcome of the analysis could show that categories containing a large amount of recipes like the pork will contain a large amount of the most common ingredients. 
 
@@ -70,7 +70,7 @@ The **Spinach** has a higher proportion from the shallot in the only recipe of t
 Normalizing is useful for categories with a certain number of recipes, however like in the case of the lamb category having only 1 recipe can make its ingredients' proportion comparable to the other categories. Therefore another filter will take the head on this hierarchy and that is the **total number of categories where the ingredient is used**
 
 ## Results
---- 
+
 In average each meal consists of 9$\pm$1**(~9)** different ingredients as shown in the figure below. This number will determine the length of the top list of ingredients as it could be considered as a standard metric to cook pretty much every meal. 
 
 ![**Figure 6. Average Number of Ingredients per Meal**](img/AverageNumberIngredients.png)
